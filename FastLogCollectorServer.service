@@ -1,0 +1,16 @@
+# /etc/systemd/system/FastLogCollectorServer.service
+[Unit]
+Description=Python Log Server Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /root/FastLogCollectorServer.py
+WorkingDirectory=/root
+User=root
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
