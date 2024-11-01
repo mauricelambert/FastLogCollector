@@ -3,7 +3,7 @@
 Event collector for Linux (python) and Windows (powershell). I write theses scripts in KOTH (King of the Hill) to detect any intrusion by monitoring only one file.
 
 > It's a POC (i write it in less than 2 hours for the KOTH), connection are not secure, there is no authentication, it's not recommended for production (you can use it in incident response if you don't have any other solution but you should consider logs as untrust, because it's very easy for an attacker to send fake/crafted logs, to sniff the network connection, to block it or to modify logs between client and server).
->> In this KOTH we had only one Windows Server (an Active Directory), a Linux server (with SMB file share and SSH access linked to domain with SSSD), a PfSense and a switch. We had secure access to AD and Linux server by creating new VLAN for servers and monitor all connections between servers and PC with the PfSense. We had some local firewall rules on the AD and the Linux, we had theses script to monitor easily servers activity with only one console and only one SOC analyst (everyone else on the team could compromise the adversaries' systems).
+>> In this KOTH we had only one Windows Server (an Active Directory), a Linux server (with SMB file share and SSH access linked to domain with SSSD), a PfSense and a switch. We had secure access to AD and Linux server by creating new VLAN for servers and monitor all connections between servers and PC with the PfSense. We had some local firewall rules on the AD and the Linux, we had theses script to monitor easily servers activity with only one console and only one SOC analyst (everyone else on the team could compromise the adversaries' systems). On the Linux we had `selinux` policy for the samba share.
 
 ## Install
 
